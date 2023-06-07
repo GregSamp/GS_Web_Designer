@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <!--Meta tag de responsividade-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GS-WebDesigner</title>
+    <link rel="icon" href="_img/icone_aba.PNG">
+    <!--Estilos gerais e das fontes-->
+    <link rel="stylesheet" href="_css/estilo.css">
+    <link rel="stylesheet" href="_css/estilo_font.css">
+    <link rel="stylesheet" href="_css/font-awesome.css">
+    <!--Estilos galeria-->
+    <link rel="stylesheet" href="_css/jquery-ui.css">
+    <link rel="stylesheet" href="_css/lightbox.css">
+    <!--Estilos carrossel-->
+    <link rel="stylesheet" href="_css/owl.theme.css">
+    <!--Estilos de animação-->
+    <link rel="stylesheet" href="_css/animate.css">
+    <link rel="stylesheet" href="_css/animate.min.css">
+    <!-- Carrossel animação figcaption-->
+    <script src="_js/modernizr.custom.js"></script>
+    <!-- JavaScript plugins) -->
+    <script src="_js/jquery-1.9.1.min.js"></script>
+    <script src="_js/jquery-ui.js"></script>
+  
+    <!--Função do Script para deslizar as sessões ao clicar nos links do menu--> 
+    <script>
+       jQuery(document).ready(function($) { 
+      $(".scroll").click(function(event){        
+        event.preventDefault();
+        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+      });
+    });
+   </script>
+    
+</head>
+<body>
+   
+ <header id="home">
+    <a href="index.html"><img id="logo" src="_img/logo_GS_Designer.png" alt=""></a>
+    <!--checagem do menu com checkbox-->
+    <input type="checkbox" id="btn-menu">
+    <label for="btn-menu"><img src="_img/menu.png" alt=""></label>
+    <nav class="menu">
+        <!--utilize o atalho ul>li*4>a[href="#"] para agilizar-->
+            <a href="index.html">Home</a>
+            <a class="scroll" href="#sobre">Sobre</a>
+            <a class="scroll" href="#area_servicos">Serviços</a>
+            <a class="scroll" href="#area_portfolio">Portfólio</a>
+            <a class="scroll" href="#area_contatos">Contatos</a>
+    </nav>
+
+ </header> 
+   <!--Slide responsivo-->
+ <section id="main-slider" class="no-margin">
+        <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+                <li data-target="#main-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="item active">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Tenha um site otimizado e moderno</h1>
+                                    <h2 class="animation animated-item-2">Projetamos e executamos o seu site de acordo com sua necessidade e otimizamos para que ele seja muito mais acessível na web</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Saiba Mais</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="_img/slider/img1.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+                <div class="item">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Designer 100% responsivo</h1>
+                                    <h2 class="animation animated-item-2">Para que seu site seja acessível em várias plataformas, trabalhamos com qualidade e deixamos o projeto totalmente responsivo</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Saiba Mais</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="_img/slider/img2.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Melhores tecnologias</h1>
+                                    <h2 class="animation animated-item-2">A GS.WebDesigner não brinca em serviço, usamos as melhores tecnologias do mercado e sempre atendemos os nosso prazos</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Saiba Mais</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 hidden-xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="_img/slider/img3.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+    </section><!--/#main-slider-->
+   <!--Area do botão de orçamento e apresentação-->
+   <div id="bem_vindos">
+        <div class="container_bemvindos">
+            <h2>Bem- vindos ao GS.Designer</h2>
+             <p>Teremos o maior prazer em criar o seu site.  <br>Entre em contato conosco e faça seu orçamento.<br><a href="#"><input class=botao_orc type="submit" value="Faça seu orçamento" id="botao_0"></a><span id="compra" class="icon-cart"></span></p>
+        </div>  
+   </div>
+   <!--Área sobre a página-->
+  <section id="sobre">
+	   <div>
+		   <div class="container_sobre">
+			   <div class="coluna_sobre_1">
+				<h1>Sobre a GS.WebDesigner</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo officia maiores dolorem autem harum quisquam temporibus voluptatem similique saepe sapiente pariatur porro, a magnam ipsa voluptate, eum cum, est nulla!</p>
+			   </div>
+			   <div class="coluna_sobre_2">
+				<img src="_img/_conteudo/sobre_1.png" alt="">
+			   </div>
+			   <div class="img2 coluna_sobre_2">
+				<img src="_img/_conteudo/sobre_2.png" alt="">
+			   </div>
+			   <div class="coluna_sobre_1">
+				<h1>Nosso amor ao designer e ao profissionalismo</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo officia maiores dolorem autem harum quisquam temporibus voluptatem similique saepe sapiente pariatur porro, a magnam ipsa voluptate, eum cum, est nulla!</p>
+			   </div>
+			    <div class="img3 coluna_sobre_2">
+				<img src="_img/_conteudo/sobre_2.png" alt="">
+			   </div>
+		   </div> 
+	   </div>
+ </section>
+   <!--Área portfolio-->
+ <section id="area_servicos" class="portifolio">
+        	<h1>Alguns de nossos serviços</h1>
+        	<div class="portifolio_container">
+        		<section class="portifolio_item wow slideInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+                     <section class="portifolio_texto_2">
+        			 	 <h2 class="texto_1">Criação de sites</h2>
+        			 	 <a href="#"><p class="texto_2">Saiba mais</p></a>
+        			 </section>
+        			 <img src="_img/_conteudo/1.2.png" alt="" class="portifolio_img">
+        			 <section class="portifolio_texto">
+        			 	 <a href="#"><p>Portfólio</p></a>
+        			 </section>
+        		</section>
+        		<section class="portifolio_item wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                     <section class="portifolio_texto_2">
+        			 	 <h2 class="texto_1">Praticas SEO</h2>
+        			 	 <a href="#"><p class="texto_2">Saiba mais</p></a>
+        			 </section>
+        			 <img src="_img/_conteudo/4.2.jpg" alt="" class="portifolio_img">
+        			 <section class="portifolio_texto">
+        			 	 <a href="#"><p>Portfólio</p></a>
+        			 </section>
+        		</section>
+        		<section class="portifolio_item wow slideInRight" data-wow-duration="1000ms" data-wow-delay="900ms">
+                     <section class="portifolio_texto_2">
+        			 	 <h2 class="texto_1">Designer responsivo</h2>
+        			 	 <a href="#"><p class="texto_2">Saiba mais</p></a>
+        			 </section>
+        			 <img src="_img/_conteudo/3.2.png" alt="" class="portifolio_img">
+        			 <section class="portifolio_texto">
+        			 	 <a href="#"><p>Portfólio</p></a>
+        			 </section>
+        		</section>
+        		<section class="portifolio_item wow slideInLeft" data-wow-duration="1000ms" data-wow-delay="1200ms">
+                     <section class="portifolio_texto_2">
+        			 	 <h2 class="texto_1">Marketing Digital</h2>
+        			 	 <a href="#"><p class="texto_2">Saiba mais</p></a>
+        			 </section>
+        			 <img src="_img/_conteudo/6.jpg" alt="" class="portifolio_img">
+        			 <section class="portifolio_texto">
+        			 	 <a href="#"><p>Portfólio</p></a>
+        			 </section>
+        		</section>
+        		<section class="portifolio_item wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="1500ms">
+                     <section class="portifolio_texto_2">
+        			 	 <h2 class="texto_1">Tecnologias</h2>
+        			 	 <a href="#"><p class="texto_2">Saiba mais</p></a>
+        			 </section>
+        			 <img src="_img/_conteudo/2.2.jpg" alt="" class="portifolio_img">
+        			 <section class="portifolio_texto">
+        			 	 <a href="#"><p>Portfólio</p></a>
+        			 </section>
+        		</section>
+        		<section class="portifolio_item wow slideInRight" data-wow-duration="1000ms" data-wow-delay="1800ms">
+                     <section class="portifolio_texto_2">
+        			 	 <h2 class="texto_1">Manutenção</h2>
+        			 	 <a href="#"><p class="texto_2">Saiba mais</p></a>
+        			 </section>
+        			 <img src="_img/_conteudo/5.png" alt="" class="portifolio_img">
+        			 <section class="portifolio_texto">
+        			 	 <a href="#"><p>Portfólio</p></a>
+        			 </section>
+        		</section>
+        		
+        	</div>
+  </section>
+    <!--Carrossel portfolio--> 
+  <section id="area_portfolio">  
+   <h1>Portfólio</h1>  
+   <div id="owl-demo" class="owl-carousel">
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/academiafittrainer.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="http://academiafittrainer.com.br/"  target="_blank">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Divulgar.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="http://www.divulgarce.com.br/" target="_blank">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Italtecnology.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="http://italtecnologybrasil.com.br/" target="_blank">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Fotografia_vicio.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="#">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Gs_WebDesigner.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="#">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+     <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Rei_do_rango.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="#">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Amicao.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="#">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+    
+    <div class="item cs-style-3">
+     <figure><img src="_img/_portfolio/Fotografia_show.PNG" alt="Owl Image">
+		 <figcaption>
+		    <div class="btns_port">
+			<a href="#">Ver mais</a>
+			<a href="#">Ir ao site</a>
+			</div>
+		 </figcaption>
+     </figure>
+    </div>
+ 
+</div>
+</section>  
+    <script src="_js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function() {
+          $("#owl-demo").owlCarousel({
+            autoPlay: 3000,
+            stopOnHover : true,
+            navigation : false,
+		    navigationText : ["&#60;","&#62"],  
+            items : 4,
+            itemsDesktop : [1199,4],
+            itemsDesktopSmall : [979,3]
+          });
+
+        });
+    </script>
+    <!--se der problema no efeito usa -- <script src="_js/toucheffects.js"></script>-->
+    <!--Contatos-->
+    <footer>
+		<div id="area_contatos" class="container">
+			<div class="col-md-4 wow slideInLeft" data-wow-duration="1000ms" data-wow-delay="300ms">
+				<h4>Onde estamos</h4>
+				<p>Empresa de webdesigner focada na qualidade do marketing digital das empresas clientes.</p>						
+				<div class="contact-info">
+					<ul>
+						<li><i class="fa fa-home fa"></i>Rua 31, Vila Velha, Fortaleza, CE </li>
+						<li><i class="fa fa-phone fa"></i> +55 85 988177202 | 85 32844954</li>
+						<li><a class="link_email" href=""><i class="fa fa-envelope fa"> GS.Webdesigner.com.br</i></a></li>
+					</ul>
+				</div>
+			</div>
+   <div class="col-md-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="900ms">
+    <!--galeria-->		
+   <div id="Galeria">
+		<h4>Galeria portfólio</h4>
+		<div id="wrapper">
+		 <!----galeria linha 1---->
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/complete-rd.png" data-lightbox="example-set" data-title="Galeria_de_fotos"><img class="example-image" src="_img/900-644-rd.png" alt="Galeria_de_fotos" title="#"></a>
+		 </div>
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/complete-rd-light.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/900-644-rd-light.png" alt="#" title="#"></a>
+		 </div>
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/900-644.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/900-644.png" alt="#" title="#"></a>
+		 </div>
+		 <!----galeria linha 1 fim---->
+
+		 <!----galeria linha 2---->
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/computer-gal.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/computer-gal.png" alt="#" title="#"></a>
+		 </div>
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/computer-guy.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/computer-guy.png" alt="#" title="#"></a>
+		 </div>
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/computer-code.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/computer-code.png" alt="#" title="#"></a>
+		 </div>
+		 <!----galeria linha 2 fim---->
+
+		 <!----galeria linha 3---->
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/complete-rd.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/900-644-rd.png" alt="#" title="#"></a>
+		 </div>
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/complete-rd-light.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/900-644-rd-light.png" alt="#" title="#"></a>
+		 </div>
+		 <div class="one-third">
+			<a class="example-image-link" id="lightbox-img" href="_img/900-644.png" data-lightbox="example-set" data-title="#"><img class="example-image" src="_img/900-644.png" alt="#" title="#"></a>
+		 </div>
+		 <!----galeria linha 3 fim---->
+	   </div>
+   </div>  
+   </div>
+        <!----Formulário---->
+        <div class="col-md-4 wow slideInRight" data-wow-duration="1000ms" data-wow-delay="1200ms">
+			    <h4>Entre em contato</h4>				
+				<div id="Formulario">
+				   <form action="enviar_2.php" method="post">
+
+					   <h3 class="duvidas">Para informações, dúvidas, sugestões ou promover uma visita de nossos consultores, entre em contato conosco através do formulário abaixo. Retornaremos o mais breve possível.</h3>
+					   <input class="input_form" type="text" name="nome" placeholder="Nome" required>
+					   <input class="input_form" type="text" name="email" placeholder="Email" required>
+					   <input class="input_form" type="text" name="fone" placeholder="Telefone" required>
+					   <textarea id="assunto" name="mensagem" placeholder="Informações, dúvidas ou sugestões" required ></textarea>
+					   <input type="submit"	value="Enviar" id="botao">	   
+
+					</form>	
+                 </div>           
+            </div>
+			
+     </div>	
+</footer>
+	<!----Area Rodapé com redes socias e copy right---->
+    <div class="sub-footer">
+		<div class="container_sub">
+			<div class="social-icon">
+				<div class="">
+					<ul class="social-network">
+						<li><a href="#" class="fb tool-tip" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" class="twitter tool-tip" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" class="gplus tool-tip" title="Google Plus"><i class="fa fa-google-plus"></i></a></li>
+						<li><a href="#" class="linkedin tool-tip" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" class="ytube tool-tip" title="You Tube"><i class="fa fa-youtube-play"></i></a></li>
+					</ul>	
+				</div>
+			</div>
+			<!----Direitos autorais--->
+			<div class="col-md-offset-4">
+				<div class="copyright">
+					&copy; Criado e Desenvolvido por GS.WebDesigner.<br>CEO: <a href="https://www.facebook.com/gregory.sampaio.54" target="_blank">Gregory Sampaio Costa.</a> Todos os direitos reservados.</div>
+			</div>						
+		</div>
+	     <!----Botão subir ao topo---->
+		 <div id="go-top"><a class="smoothscroll" title="Voltar ao topo" href="#home"><span id="topo" class="icon-point-up"></span></a></div>
+	 </div>
+   
+     <!-- js para animações-->    
+	<script src="_js/wow.min.js"></script>
+	<script>wow = new WOW({}).init();</script>
+     <!-- js para botao de subir topo--> 
+    <script src="_js/subirTopo.js"></script>
+     <!-- jQuery para galeria !não utilizar a versão plus pois da bug no carrossel--> 
+    <script src="_js/lightbox.js"></script>
+     <!-- Slider--> 
+    <script src="_js/bootstrap.min.js"></script>
+    <script src="_js/slide.js"></script>
+    
+</body>
+</html>
